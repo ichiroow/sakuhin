@@ -1,0 +1,54 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Yu Gothic UI', sans-serif;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.button-group button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background: #e0e0e0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}

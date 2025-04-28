@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>タスク管理</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <form method="POST" action="/">
+        <div>
+            <label>タスク内容：</label><br>
+            <input type="text" name="content" required>
+        </div>
+
+        <div>
+            <label>優先度：</label><br>
+            <select name="priority" required>
+                <option value="低">低</option>
+                <option value="普" selected>普</option>
+                <option value="高">高</option>
+            </select>
+        </div>
+
+        <div>
+            <label>期日：</label><br>
+            <input type="date" name="deadline">
+        </div>
+
+        <button type="submit" class="add-button">追加</button>
+    </form>
+
+    <h2>タスクリスト</h2>
+    <hr>
+
+    <div class="button-group">
+        <button>現在のタスク</button>
+        <button>完了タスクのみ表示</button>
+    </div>
+
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task[1] }} - 優先度: {{ task[2] }} - 期日: {{ task[3] }}</li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
